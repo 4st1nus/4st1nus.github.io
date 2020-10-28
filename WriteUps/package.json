@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "parriba": "ng build --prod=true --outputPath=docs --baseHref=\"https://4st1nus.github.io/WriteUps\""
+    "parriba": "ng build --prod=true --outputPath=../docs --baseHref=\"https://4st1nus.github.io/WriteUps\""
   },
   "private": true,
   "dependencies": {
