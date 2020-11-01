@@ -1,0 +1,25 @@
+<!-- Bootstrap container to show the page centered with left & right margins-->
+<!-- Refer Style.css for the Bootstrap overriden values for this app-->
+<div class="container">
+    <!-- 
+        HEADER - It has a bootstrap navbar with 6 main navigation links each of them with 3 additinal sub navigation links
+        All those links are dummy and do not have a working page. If you click on them, they just navigate to home page 
+        at this moment
+    -->
+    <app-header></app-header>
+
+    <!--                                
+        Main Content - main content where the page content is shown.
+    -->
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <!--
+        Footer - It has copy right text & 5 more dummy links just for the demo purpose
+    -->
+    <app-footer></app-footer>
+</div>
+
+<!-- Container for angular2-toaster. Any REST errors will be shown here!-->
+<toaster-container></toaster-container>

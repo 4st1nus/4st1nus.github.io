@@ -1,0 +1,46 @@
+<div class="fixed-top container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border">
+        <a class="navbar-brand"
+           href="#">My Blog</a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#top-navbar-menus"
+                aria-controls="top-navbar-menus"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                *ngIf="menuItems">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="top-navbar-menus"
+             *ngIf="menuItems">
+            <ul class="navbar-nav justify-content-around w-100">
+                <li class="nav-item dropdown main-navigation"
+                    *ngFor="let menu of menuItems">
+                    <!-- Top level menu-->
+                    <a class="nav-link dropdown-toggle text-white"
+                       href="#"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       *ngIf="!menu?.subMenu"
+                       [routerLink]="menu.routerLink">{{menu.text}}</a>
+
+                    <!-- When menu has sub menus-->
+                    <span class="nav-link dropdown-toggle text-white nav-link-dropdown-toggle top-level-navlink"
+                          *ngIf="menu?.subMenu"
+                          aria-haspopup="true"
+                          aria-expanded="false">{{menu.text}}</span>
+                    <div class="dropdown-menu mt-0"
+                         aria-labelledby="dropdown09">
+                        <a class="dropdown-item"
+                           href="#"
+                           *ngFor="let subMenu of menu.subMenu text-white"
+                           [routerLink]="subMenu.routerLink">{{subMenu.text}}</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

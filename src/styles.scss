@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+///////////////////////////// BOOTSTRAP
+
+// Overriding Bootstrap Container Width
+// Overriding maximum width to be 1280px
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px
+);
+
+//Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap";
+
+///////////////////////////// ANGULAR2-TOASTER
+@import '~angular2-toaster/src/toaster';
+
+///////////////////////////// SPINKIT
+@import '~spinkit/spinkit.min.css';
+
+///////////////////////////// FONTAWESOME
+@import '~@fortawesome/fontawesome-free/css/brands.css';
+@import '~@fortawesome/fontawesome-free/css/regular.css';
+@import '~@fortawesome/fontawesome-free/css/solid.css';
+@import '~@fortawesome/fontawesome-free/css/fontawesome.css';

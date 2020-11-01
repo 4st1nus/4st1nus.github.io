@@ -1,0 +1,40 @@
+<app-content-separator>
+    <!-- Main Content-->
+    <!-- Infinite scroll Refer : https://github.com/orizens/ngx-infinite-scroll-->
+    <div class="main-content"
+         infinite-scroll
+         [infiniteScrollDistance]="2"
+         (scrolled)="onScrollDown()">
+
+        <div class="card posts-article-wrapper"
+             (click)="showDetails(post)"
+             *ngFor="let post of posts">
+            <article>
+                <div>
+                    <strong>{{post.title}}</strong>
+                </div>
+                <div>
+                    <small><u class="text-danger">more...</u></small>
+                </div>
+            </article>
+        </div>
+        <app-spinner [showLoader]="!!loaderService.loaders[loaderNamesEnum.service1]"></app-spinner>
+    </div>
+    <!--Context Area. Dummy Links-->
+    <div class="context">
+        <div class="card">
+            <div class="card-body">
+                <div class="posts-context">
+                    <div>
+                        <strong>Categories (Dummy Links) </strong>
+                    </div>
+                    <div class="pl-3 mt-3">
+                        <dd> <a href="#">Category 1</a></dd>
+                        <dd> <a href="#">Category 2</a></dd>
+                        <dd> <a href="#">Category 3</a></dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-content-separator>
